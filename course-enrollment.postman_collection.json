@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "c0c2d87a-190c-4f5a-98f4-ae2dee0094e0",
+		"name": "course-enrollment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gateway-user-service-registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Mary Ann Rufo\",\n\t\"username\": \"maryannrufo\",\n\t\"password\": \"password123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8765/api/user/service/registration",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"user",
+						"service",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gateway-user-service-allCourse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8765/api/course/service/",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"course",
+						"service",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-service-registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Mary Ann\",\n\t\"username\": \"maryann\",\n\t\"password\": \"password123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/service/registration",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"service",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-service-getUsers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"1\",\"2\"]"
+				},
+				"url": {
+					"raw": "localhost:8000/service/names",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"service",
+						"names"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

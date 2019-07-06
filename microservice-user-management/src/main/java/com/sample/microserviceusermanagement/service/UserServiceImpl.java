@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
     public void saveUser(User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
-    }
+}
 
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);

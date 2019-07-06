@@ -55,6 +55,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 - Form Payload
 - HTTPHeaders (using base64 token)
 
+Gateway Path
+
 
 Intellij > Settings > Annotation Processors > Enable Annotation Processing
 
@@ -192,3 +194,24 @@ COURSE-SERVICE	n/a (1)	(1)	UP (1) - xx:course-service:8001
 LOG-SERVICE	n/a (1)	(1)	UP (1) - xx:log-service:8002
 USER-SERVICE	n/a (1)	(1)	UP (1) - xx:user-service:8000
 ```
+
+## V. Zuul Gateway Service
+**Dependencies**
+1. Zuul
+2. Eureka Discovery Client
+
+To run:
+```
+Access:
+Run ZuulGatewayServiceApplication.java
+http://localhost:8765/api/user
+http://localhost:8765/api/log
+http://localhost:8765/api/course
+```
+
+Load Balance Example:
+```
+env.getProperty("local.server.port");
+Run another instance of application
+```
+
