@@ -177,3 +177,18 @@ Will display:
   }
 }
 ```
+
+## IV. Eureka Service
+**Dependencies**
+1. Eureka Server
+
+To Run:
+```
+Run MicroserviceCourseManagementApplication.java
+Access: http://localhost:8761/
+Run user-service, log-service, course-service
+Eureka should display:
+COURSE-SERVICE	n/a (1)	(1)	UP (1) - xx:course-service:8001
+LOG-SERVICE	n/a (1)	(1)	UP (1) - xx:log-service:8002
+USER-SERVICE	n/a (1)	(1)	UP (1) - xx:user-service:8000
+```
