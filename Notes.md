@@ -215,3 +215,63 @@ env.getProperty("local.server.port");
 Run another instance of application
 ```
 
+## VI. Angular Client
+- package.json
+- component
+```
+ng generate 
+```
+- directive
+```
+import { Directive, ElementRef } from '@angular/core';
+@Directive({selector: '[myRed]'})
+export class MyRedDirective{
+	constructor(elRef: ElementRef){
+		elRef.nativeElement.style.color = 'red';
+	}
+}
+<p myRed>I am red</p>
+```
+- service
+- class
+- enum
+- guard
+- pipe
+- npm install component name --save
+- index.html
+- component structure
+- configuration files
+- lifecycle of component
+- directives and components
+
+1. User Service (Login, Register, Profile)
+2. Course Service (Course List, Enrollment)
+3. Log Service (Course Detail, Statistics)
+
+```
+node -v
+ng version
+ng new course-enrollment-client
+cd course-enrollment-client\
+npm install --save @angular/cdk @angular/animations
+npm install --save @angular/material
+npm install hammerjs
+npm install --save bootstrap jquery popper.js
+ng generate component /components/login
+ng generate component /components/register
+ng generate component /components/profile
+ng generate component /components/course
+ng generate component /components/course-list
+ng generate service /services/auth
+ng generate service /services/log
+ng generate service /services/course
+ng generate service /services/emitter
+```
+
+```
+https://material.angular.io/guide/getting-started
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+```
+
+https://gitlab.com/mailman/mailman-website/tree/master/content/fonts	
+
