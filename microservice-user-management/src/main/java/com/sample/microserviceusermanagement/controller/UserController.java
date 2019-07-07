@@ -28,6 +28,11 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    @GetMapping("/service/user")
+    public ResponseEntity<?> user(Principal principal) {
+        return getUser(principal);
+    }
+
     @GetMapping("/api/user/service/user")
     public ResponseEntity<?> getUser(Principal principal) {
         if (principal == null || principal.getName() == null) {
