@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByUsername(username);
     }
 
-    public List<User> findUsers(List<Long> ids){
-        return userRepository.findUsersByIds(ids);
+    public List<String> findUsers(List<Long> ids){
+        return userRepository.findUserNames(ids);
     }
 }

@@ -13,7 +13,7 @@ public class TransactionRepositoryImpl extends AbstractGenericDao<Transaction> i
 
     @Override
     public List<Transaction> findAllTransactionsOfUser(final Long userId){
-        String hql = "SELECT t FROM transaction t WHERE t.userId = :pUserId";
+        String hql = "SELECT t FROM Transaction t WHERE t.userId = :pUserId";
         Query query = entityManager.createQuery(hql);
         query.setParameter("pUserId", userId);
         return query.getResultList();
@@ -21,7 +21,7 @@ public class TransactionRepositoryImpl extends AbstractGenericDao<Transaction> i
 
     @Override
     public List<Transaction> findAllTransactionsOfCourse(final Long courseId){
-        String hql = "SELECT t FROM transaction t WHERE t.courseId = :pCourseId";
+        String hql = "SELECT t FROM Transaction t WHERE t.course.id = :pCourseId";
         Query query = entityManager.createQuery(hql);
         query.setParameter("pCourseId", courseId);
         return query.getResultList();
