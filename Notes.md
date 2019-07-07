@@ -275,3 +275,64 @@ https://material.angular.io/guide/getting-started
 
 https://gitlab.com/mailman/mailman-website/tree/master/content/fonts	
 
+**Authentication and Login**
+
+TypeScript vs JavaScript [Reference](https://www.geeksforgeeks.org/difference-between-typescript-and-javascript/)
+- TypesScript is known as Object oriented programming language whereas JavaScript is a scripting language. 
+- TypeScript has a feature known as Static typing but JavaScript does not have this feature. 
+- TypeScript gives support for modules whereas JavaScript does not support modules. 
+
+- in angular, pipe can be used as interruptor
+
+**Profile**
+
+
+1) Start  mysqlDb > start using laragon
+```
+port 3306 is up
+```
+2) Start cassandra > cassandra.bat 
+```
+Starting listening for CQL clients on localhost/127.0.0.1:9042 (unencrypted)...
+```
+3) Run Eureka Service *EurekaDiscoveryServiceApplication*
+```
+Tomcat started on port(s): 8761 (http) with context path ''
+Updating port to 8761
+Started EurekaDiscoveryServiceApplication in 22.526 seconds (JVM running for 26.127)
+```
+4) Run User Service *MicroserviceUserManagementApplication*
+```
+Tomcat started on port(s): 8000 (http) with context path ''
+Updating port to 8000
+Started MicroserviceUserManagementApplication in 38.346 seconds (JVM running for 42.186)
+```
+5) Run Log Service *MicroserviceLogManagementApplication*
+```
+Tomcat started on port(s): 8002 (http) with context path ''
+Updating port to 8002
+Started MicroserviceLogManagementApplication in 24.881 seconds (JVM running for 26.984)
+```
+6) Run Course Service *MicroserviceCourseManagementApplication*
+```
+Tomcat started on port(s): 8001 (http) with context path ''
+Updating port to 8001
+Started MicroserviceCourseManagementApplication in 32.873 seconds (JVM running for 35.039)
+```
+7) Run Zuul Gateway *ZuulGatewayServiceApplication*
+```
+Tomcat started on port(s): 8765 (http) with context path ''
+Updating port to 8765
+Started ZuulGatewayServiceApplication in 17.769 seconds (JVM running for 19.291)
+```
+8) Check Eureka Service:
+```
+COURSE-SERVICE	n/a (1)	(1)	UP (1) - xxx:course-service:8001
+GATEWAY-SERVER	n/a (1)	(1)	UP (1) - xxx:gateway-server:8765
+LOG-SERVICE	n/a (1)	(1)	UP (1) - xxx:log-service:8002
+USER-SERVICE	n/a (1)	(1)	UP (1) - xxx:user-service:8000
+```
+8) Run client> ng serve
+```
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+```
